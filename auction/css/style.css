@@ -1,0 +1,102 @@
+header {
+  font-size: 1.2em;
+  text-decoration: underline;
+  background-color: rgba(7, 88, 167, 0.99);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border-bottom: solid 2px black;
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+}
+
+body {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(gray), color-stop(white), to(gray));
+  background-image: linear-gradient(gray, white, gray);
+  background-attachment: fixed;
+  text-align: center;
+  font-family: monospace;
+  font-size: 1.2em;
+}
+
+main {
+  overflow: hidden;
+  padding-top: 5.5em;
+  padding-bottom: 3em;
+}
+
+main .gallery {
+  padding: 1.5em;
+  display: -ms-grid;
+  display: grid;
+  gap: 2em;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  overflow: hidden;
+}
+
+@media (min-width: 800px) {
+  main .gallery {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  main .gallery {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+main .gallery div {
+  position: relative;
+  padding: 2em;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0758a7), to(#ffdd33));
+  background-image: linear-gradient(#0758a7, #ffdd33);
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+  border-radius: 5%;
+  border: solid 2px black;
+}
+
+main .gallery div:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+main .gallery div img {
+  border: solid 2px black;
+  border-radius: 5%;
+}
+
+main .background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  margin: 0px;
+  padding-top: 10em;
+  background-color: rgba(7, 88, 167, 0.9);
+}
+
+main .background .deta {
+  position: relative;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 2em;
+}
+
+footer {
+  background-color: #ffdd33;
+  position: absolute;
+  left: 0%;
+  bottom: auto;
+  border-top: ridge 2px black;
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */
